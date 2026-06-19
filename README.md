@@ -5,6 +5,7 @@ This repository contains implementations of various Digital Signal Processing (D
 ## Algorithms Implemented
 
 ### 1. Digital Signal Processing (DSP)
+*   **Pan-Tompkins Algorithm**: The classic time-domain approach using bandpass filtering, differentiation, squaring, and moving window integration.
 *   **Continuous Wavelet Transform (CWT)**: Uses `mexh` wavelet focusing on QRS energy band.
 *   **Discrete Wavelet Transform (DWT)**: Uses decimated `sym4` wavelet with Multi-Resolution Analysis (inverse DWT) for precise temporal reconstruction.
 *   **Stationary Wavelet Transform (SWT)**: Uses un-decimated `sym4` wavelet to preserve perfect time resolution.
@@ -22,6 +23,7 @@ The following table compiles the global performance metrics evaluated across the
 |:-----------------------------------|--------------:|-------:|-----:|-----:|------------------:|--------------------:|-----------------:|----------------------:|
 | Continuous Wavelet Transform (CWT) |        102941 | 101485 |  467 | 1456 |             98.59 |               99.54 |             1.87 |                  0.12 |
 | Stationary Wavelet Transform (SWT) |        102941 | 101026 |  303 | 1915 |             98.14 |               99.70 |             2.15 |                  0.15 |
+| Pan-Tompkins Algorithm             |        102941 |  99025 |  235 | 3916 |             96.20 |               99.76 |             4.03 |                  0.07 |
 | Standard UNet                      |         49651 |  49609 | 2101 |   42 |             99.92 |               95.94 |             4.32 |                  2.60 |
 | UNet++                             |         49651 |  49622 | 2314 |   29 |             99.94 |               95.54 |             4.72 |                  2.86 |
 | Discrete Wavelet Transform (DWT)   |        102941 |  97512 |  342 | 5429 |             94.73 |               99.65 |             5.61 |                  0.11 |
@@ -35,6 +37,7 @@ The following table compiles the global performance metrics evaluated across the
 *   **Error Rate**: $(FP + FN) / Total Beats$ - Overall percentage of detection mistakes.
 
 ## Repository Structure
+*   `pan-thomp.ipynb`: Pan-Tompkins Implementation.
 *   `wavelet-cwt.ipynb`: CWT Implementation.
 *   `wavelet.ipynb`: DWT and SWT Implementations.
 *   `UNet_MITBIH.ipynb`: Standard UNet Implementation.
